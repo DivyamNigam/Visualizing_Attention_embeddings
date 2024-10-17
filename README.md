@@ -3,7 +3,8 @@ Visualizing embeddings from attention and without attention
 Tokenizing sentence- "I would like sit at river bank and get money from bank.", with and without attention mechanism and plottong words on a 3d graph.
 
 Using `google-bert/bert-base-uncased` model to tokenize text and for creating embeddings of dimension 3 then applying self attention to it
-`class Attention(nn.Module):
+`
+class Attention(nn.Module):
     def __init__(self):
         super(Attention, self).__init__()
         self.query_linear = nn.Linear(768, 768)
@@ -25,7 +26,8 @@ Using `google-bert/bert-base-uncased` model to tokenize text and for creating em
         context = torch.matmul(attention_weights, value)
         return context
 
-attention_model = Attention()`
+attention_model = Attention()
+`
 
 ![newplot (1)](https://github.com/user-attachments/assets/25ea7720-6d9f-4bd8-b0e4-85f688fbcf79)
 ![newplot](https://github.com/user-attachments/assets/cf727f38-1355-40f0-bc45-9a77418624a6)
